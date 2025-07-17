@@ -16,7 +16,7 @@ const Users: React.FC<UserProps[]> = ({users}) => {
 
       <div className="grid grid-cols-3 gap-2 p-0 ">
         {
-          users?.map(({  name, username, email,address,website,id,phone,company }: UserProps, key: number) => (
+          users.map(({  name, username, email,address,website,id,phone,company }: UserProps, key: number) => (
             <UserCard name={name} username={username} email={email} address={address} id={id} phone={phone} website={website} company={company} key={key} />
           ))
         }
