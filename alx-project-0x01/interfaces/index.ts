@@ -59,15 +59,15 @@ export interface UserData {
   name: string;
   username: string;
   email: string;
-  address: Address;
+ 
   phone: string;
   website: string;
-  company: Company;
+ 
 }
 
 export interface UserModalProps {
   onClose: () => void;
-  onSubmit: (post: UserData) => void;
+  onSubmit: (user: UserData) => void;
 }
 
 
