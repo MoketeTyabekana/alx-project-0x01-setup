@@ -17,11 +17,11 @@ const Posts: React.FC<PostProps[]> = ({ posts }) => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <main className="p-4">
+      <main className="px-10">
         <div className="flex justify-between">
           <h1 className=" text-2xl font-semibold">Post Content</h1>
           <button onClick={() => setModalOpen(true)}
-            className="bg-blue-700 px-10 py-2 rounded-full text-white">Add Post</button>
+            className="bg-blue-700 px-10 py-2 rounded-full text-white  hover:bg-blue-800 transition ease-in-out 0.3s ">Add Post</button>
         </div>
         <div className="grid grid-cols-3 gap-2 ">
           {
