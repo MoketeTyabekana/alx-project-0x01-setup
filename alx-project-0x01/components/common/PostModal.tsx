@@ -7,11 +7,17 @@ const PostModal:React.FC<PostModalProps>=({onClose,onSubmit})=> {
     userId:1,
     title:"",
     body:""
- })
+ });
+
+ const handleChange=(e:React.FormEvent)=>{
+    e.preventDefault();
+    onSubmit(post);
+    onClose();
+ }
  
  return(
     <div>
-        
+
     </div>
  );
  
