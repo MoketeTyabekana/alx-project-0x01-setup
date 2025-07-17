@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import { UserData } from "@/interfaces";
 
 const Home: React.FC = () => {
   return (

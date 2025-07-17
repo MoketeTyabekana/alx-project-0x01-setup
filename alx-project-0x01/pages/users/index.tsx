@@ -1,17 +1,24 @@
-import React from "react";
-import UserCard from '../../components/common/UserCard';
+import UserCard from "@/components/common/UserCard";
+import UserModal from "@/components/common/UserModal";
 import Header from "@/components/layout/Header";
-import { UserProps } from "@/interfaces";
+import { UserData, UserProps } from "@/interfaces";
+import { useState } from "react";
 
 const Users: React.FC<UserProps[]> = ({users}) => {
-     console.log(users)
+      const [isModalOpen, setModalOpen] = useState(false);
+ const [user, setUser] = useState<UserData | null>(null);
+
+       const handleAddUsers = (newUser: UserData) => {
+  setUser({ ...newUser, id: users.length + 1 });
+};
+
   return (
       <div className="flex flex-col h-screen">
     <Header />
     <main className="px-10 pt-20">
       <div className="flex justify-between mb-4">
       <h1 className=" text-2xl font-semibold">Users Content</h1>
-      <button className="bg-blue-700 px-10 py-2 rounded-full text-white hover:bg-blue-800 transition ease-in-out 0.3s">Add User</button>
+      <button onClick={() => setModalOpen(true)} className="bg-blue-700 px-10 py-2 rounded-full text-white hover:bg-blue-800 transition ease-in-out 0.3s">Add User</button>
       </div>
 
       <div className="grid grid-cols-3 gap-2 ">
@@ -22,6 +29,10 @@ const Users: React.FC<UserProps[]> = ({users}) => {
         }
       </div>
     </main>
+
+        {isModalOpen && (
+      <UserModal onClose={() => setModalOpen(false)} onSubmit={handleAddUsers} />
+    )}
   </div>
   )
 }
