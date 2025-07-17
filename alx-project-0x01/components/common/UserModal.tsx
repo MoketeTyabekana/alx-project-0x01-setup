@@ -11,7 +11,21 @@ export default function UserModal() {
       phone: "",
       website: "",
     });
+
+        const handleChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+      const { name, value } = e.target;
+      setUser((prevUser) => ({ ...prevUser, [name]: value }));
+    };
+
+       const handleSubmit = (e: React.FormEvent) => {
+   e.preventDefault();
+   onSubmit(user);
+   onClose();
+ };
   };
+
 
   return <div></div>;
 }
