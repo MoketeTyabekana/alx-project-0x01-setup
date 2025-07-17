@@ -27,14 +27,14 @@ interface Company {
 }
 
 export interface UserProps {
-//   id: number;
+  id: number;
   name: string;
   username: string;
   email: string;
   address: Address;
-//   phone: string;
-//   website: string;
-//   company: Company;
+  phone: string;
+  website: string;
+  company: Company;
 }
 
 
