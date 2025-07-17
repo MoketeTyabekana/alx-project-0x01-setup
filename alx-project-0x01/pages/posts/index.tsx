@@ -10,7 +10,7 @@ const Posts: React.FC<PostProps[]> = ({ posts }) => {
       <main className="py-4 px-10">
         <div className="flex justify-between">
         <h1 className=" text-2xl font-semibold">Post Content</h1>
-        <button className="bg-blue-700 px-4 py-2 rounded-full text-white">Add Post</button>
+        <button className="bg-blue-700 px-10 py-2 rounded-full text-white hover:bg-blue-800 transition ease-in-out 0.3s">Add Post</button>
         </div>
         
         <div className="grid grid-cols-3 gap-2 ">

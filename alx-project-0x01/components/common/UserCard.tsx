@@ -10,7 +10,7 @@ const UserCard: React.FC<UserProps> = ({
   id,
   phone,
   website,
-  company,
+ 
 }) => {
   return (
     <div className="max-w-xl  my-6 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
