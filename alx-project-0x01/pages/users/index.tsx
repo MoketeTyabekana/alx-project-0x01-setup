@@ -8,7 +8,7 @@ const Users: React.FC<UserProps[]> = ({users}) => {
   return (
       <div className="flex flex-col h-screen">
     <Header />
-    <main className="px-10">
+    <main className="px-10 pt-20">
       <div className="flex justify-between mb-4">
       <h1 className=" text-2xl font-semibold">Users Content</h1>
       <button className="bg-blue-700 px-10 py-2 rounded-full text-white hover:bg-blue-800 transition ease-in-out 0.3s">Add User</button>
