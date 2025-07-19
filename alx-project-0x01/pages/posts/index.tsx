@@ -17,7 +17,7 @@ const Posts: React.FC<PostProps[]> = ({ posts }) => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <main className="px-10">
+      <main className="px-10 pt-20">
         <div className="flex justify-between">
           <h1 className=" text-2xl font-semibold">Post Content</h1>
           <button onClick={() => setModalOpen(true)}
