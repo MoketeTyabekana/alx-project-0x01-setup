@@ -26,9 +26,9 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
 
   return (
     <div className="fixed inset-0 bg-black/90 bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white rounded-lg p-8 shadow-lg w-full max-w-md">
+      <div className="bg-white rounded-lg p-8 shadow-lg w-full max-w-2/3 ">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">Add New user</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
           <div className="mb-4">
             <label
               htmlFor="userId"
@@ -40,7 +40,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               type="number"
               id="userId"
               name="userId"
-              value={user.userId}
+              value={user.id}
               onChange={handleChange}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 
 focus:ring-blue-500"
@@ -51,37 +51,83 @@ focus:ring-blue-500"
               htmlFor="title"
               className="block text-gray-700 font-medium mb-2"
             >
-              Title
+              Name
             </label>
             <input
               type="text"
               id="title"
               name="title"
-              value={user.id}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 
-focus:ring-blue-500"
-              placeholder="Enter user title"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="body"
-              className="block text-gray-700 font-medium mb-2"
-            >
-              Body
-            </label>
-            <textarea
-              id="body"
-              name="body"
               value={user.name}
               onChange={handleChange}
-              rows={4}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 
 focus:ring-blue-500"
-              placeholder="Enter user content"
+              placeholder="Enter Your Firstname"
             />
           </div>
+
+                    <div className="mb-4">
+            <label
+              htmlFor="title"
+              className="block text-gray-700 font-medium mb-2"
+            >
+              Surname
+            </label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              value={user.name}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500"
+              placeholder="Enter Your Lastname"
+            />
+          </div>
+
+<div className="mb-4">
+  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+    Email
+  </label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    value={user.email}
+    onChange={handleChange}
+    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    placeholder="Enter your email"
+  />
+</div>
+
+<div className="mb-4">
+  <label htmlFor="street" className="block text-gray-700 font-medium mb-2">
+    Street
+  </label>
+  <input
+    type="text"
+    id="street"
+    name="street"
+    
+    onChange={handleChange}
+    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    placeholder="Enter street address"
+  />
+</div>
+
+<div className="mb-4">
+  <label htmlFor="city" className="block text-gray-700 font-medium mb-2">
+    City
+  </label>
+  <input
+    type="text"
+    id="city"
+    name="city"
+   
+    onChange={handleChange}
+    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    placeholder="Enter city"
+  />
+</div>
           <div className="flex justify-between items-center">
             <button
               type="button"
